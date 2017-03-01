@@ -1,3 +1,10 @@
+
+define(['jquery','nprogress'], function($,Nprogress) {
+    Nprogress.done();
+});
+
+
+
 /*
 
 
