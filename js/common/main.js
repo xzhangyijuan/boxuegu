@@ -12,9 +12,13 @@ requirejs.config({
         echarts: 'lib/echarts/echarts.min',
         nprogress: 'lib/nprogress/nprogress',
         template:'lib/artTemplate-3.0.1/template',
+        datepicker: 'lib/bootstrap-datepicker/js/bootstrap-datepicker',
+        datepickerLanguage: 'lib/bootstrap-datepicker/locales/bootstrap-datepicker.zh-CN.min',
+
 
         // 自己写的路径配置
         common: 'js/common/common',
+        util: 'js/common/util',
 
         index: 'js/index',
 
@@ -44,6 +48,9 @@ requirejs.config({
     shim: {
         bootstrap: {
             deps: ['jquery']
+        },
+        datepickerLanguage :{
+            deps: ['jquery','datepicker']
         }
     }
 });

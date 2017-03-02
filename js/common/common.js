@@ -54,11 +54,15 @@ define(['jquery','jqueryCookie'], function ($,undefined) {
     $('.aside .profile h4').html(userInfo.tc_name?userInfo.tc_name:'非法用户名');
 
 
-/*
-    $('.aside .profile h4').html(userInfo.tc_name? userInfo.tc_name:'dagenimeiminga');
+
+    //点击个人中心，设置a标签的href属性
+    $('#selfCenter').on('click', function () {
+       $(this).attr('href="../course/course_add_step2.html?"'+tcId+'')
+    });
+
+/*    $('.aside .profile h4').html(userInfo.tc_name? userInfo.tc_name:'dagenimeiminga');
     $('.aside .profile img').attr('src', userInfo.tc_avatar? userInfo.tc_avatar: '/img/default.png');
-*/
-    /*$.ajax({
+    $.ajax({
         url: '/v6/login',
         type: 'post',
         data: {
